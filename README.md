@@ -61,6 +61,25 @@ IF  ->  ID  ->  EX  ->  MEM  ->  WB
 | MEM | Access data memory |
 | WB | Write results back to register file |
 
+
+## Project Structure
+
+```text
+RISCV-5-Stage-pipeline-core/
+│
+├── rtl/
+│   └── design.sv
+│
+├── tb/
+│   └── testbench.sv
+│
+├── mem/
+│   └── program.mem
+│
+└── simulation_waveform/
+
+```
+
 ---
 ## Pipeline Timing
 
@@ -81,26 +100,8 @@ That overlapping execution proves pipelining.
 
 ## Output Image
 
-![Pipeline Output](./output.png)
+![Pipeline Output](simulation_waveform/output_in_EDA_PLAYGROUND.png)
 
-
-## Project Structure
-
-```text
-RISCV-5-Stage-pipeline-core/
-│
-├── rtl/
-│   └── design.sv
-│
-├── tb/
-│   └── testbench.sv
-│
-├── mem/
-│   └── program.mem
-│
-└── simulation_waveform/
-
-```
 
 ---
 
