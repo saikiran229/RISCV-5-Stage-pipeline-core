@@ -62,6 +62,27 @@ IF  ->  ID  ->  EX  ->  MEM  ->  WB
 | WB | Write results back to register file |
 
 ---
+## Pipeline Timing
+
+pipeline approximately behaves like this:
+
+| Cycle | IF        | ID        | EX        | MEM       | WB        |
+| ----- | --------- | --------- | --------- | --------- | --------- |
+| 1     | `addi x1` |           |           |           |           |
+| 2     | `addi x2` | `addi x1` |           |           |           |
+| 3     | `nop`     | `addi x2` | `addi x1` |           |           |
+| 4     | `nop`     | `nop`     | `addi x2` | `addi x1` |           |
+| 5     | `add x3`  | `nop`     | `nop`     | `addi x2` | `addi x1` |
+| 6     | `sw x3`   | `add x3`  | `nop`     | `nop`     | `addi x2` |
+
+That overlapping execution proves pipelining.
+
+---
+
+## Output Image
+
+![Pipeline Output](./output.png)
+
 
 ## Project Structure
 
