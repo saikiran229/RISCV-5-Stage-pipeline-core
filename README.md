@@ -77,9 +77,8 @@ RISCV-5-Stage-pipeline-core/
 ├── mem/
 │   └── program.mem
 │
-├── sim/
-│
-└── docs/
+└── simulation_waveform/
+
 ```
 
 ---
